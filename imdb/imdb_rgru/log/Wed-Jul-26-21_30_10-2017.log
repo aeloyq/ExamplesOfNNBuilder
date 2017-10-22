@@ -1,0 +1,1257 @@
+
+Prepare Model:
+
+
+Data Detail:
+
+            Datasets       |         Train        |         Valid        |         Test         
+            ===============|======================|======================|======================
+            SingleFile     |         1893         |          210         |          210         
+            N_Batch        |         8*254        |         4*64         |         4*64       
+
+Config Detail:
+
+                       Global           |            Graph           |          Extension         
+            ============================|============================|============================
+                 transpose_y = False    |layer1                      |monitor                     
+                 transpose_x = True     |----------------------------|----------------------------
+                  name = imdb_rgru      |       in_dim = 100000      |     report_epoch = True    
+                    int_y = True        |        unit_dim = 10       |        plot = False        
+                    int_x = True        |        name = layer1       |       dotprint = True      
+            data_path = ../datasets/imdb|        emb_dim = 10        |  report_iter_frequence = 5 
+                  batch_size = 254      |                            |     report_iter = False    
+                   savelog = True       |layer2                      |                            
+                    mask_x = True       |----------------------------|saveload                    
+                valid_batch_size = 64   |         in_dim = 10        |----------------------------
+                   mask_y = False       |         out = mean         |         load = True        
+                   max_epoch = 180      |       unit_dim = 128       |      save_freq = 10000     
+                                        |        name = layer2       |    data_changed = False    
+                                        |                            |        save_len = 3        
+                        Model           |layer3                      |         save = True        
+            ============================|----------------------------|      overwrite = True      
+                    n_layers = 3        |        in_dim = 128        |     save_epoch = False     
+                      n_ops = 0         |        unit_dim = 2        |                            
+                   X_dim = 100000       |        name = layer3       |earlystop                   
+                     pre_dim = 2        |                            |----------------------------
+                                        |                            |   best_valid_error = 1.0   
+                                        |          Algrithm          |       valid_freq = 0       
+                                        |============================|    imp_threshold = 0.995   
+                                        |        beta_1 = 0.9        |        patience = 0        
+                                        |       beta_2 = 0.999       |   save_when_valid = False  
+                                        |       epsilon = 1e-08      |    patience_increase = 2   
+                                        |    learning_rate = 0.01    |       best_iter = -1       
+                                        |       if_clip = False      |     valid_epoch = True     
+                                        |            t = 1           |                            
+                                        |    grad_clip_norm = 1.0    |                            
+                                        |        alpha = 0.001       |                          
+
+Building Function:
+
+            Compiling Training Model
+            Compiling Validing Model
+            Compiling Test Model
+            Compiling Sampling Model
+            Compiling Model
+
+Trainning Model:
+
+            Training Start
+
+            Loading saved model from checkpoint:
+
+                        Checkpoint not found, exit loading
+                        
+            Epoch Done:
+            ========================
+                    Epoch:1         
+                    Update:8        
+                 Time Used:1.69s    
+                   Loss:0.6775      
+                 Error:39.6267%     
+            ========================
+                        
+
+            Better Model Detected at Epoches:1  Iterations:8  Valid error:44.1406%
+
+                        
+            Epoch Done:
+            ========================
+                    Epoch:2         
+                    Update:16       
+                 Time Used:0.69s    
+                   Loss:0.6773      
+                 Error:41.5799%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:3         
+                    Update:24       
+                 Time Used:0.72s    
+                   Loss:0.6772      
+                 Error:41.5799%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:4         
+                    Update:32       
+                 Time Used:0.70s    
+                   Loss:0.6773      
+                 Error:41.5799%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:5         
+                    Update:40       
+                 Time Used:0.70s    
+                   Loss:0.6771      
+                 Error:41.5799%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:6         
+                    Update:48       
+                 Time Used:0.72s    
+                   Loss:0.6770      
+                 Error:41.5799%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:7         
+                    Update:56       
+                 Time Used:0.69s    
+                   Loss:0.6768      
+                 Error:41.9705%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:8         
+                    Update:64       
+                 Time Used:0.71s    
+                   Loss:0.6766      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                    Epoch:9         
+                    Update:72       
+                 Time Used:0.71s    
+                   Loss:0.6764      
+                 Error:38.6285%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:10         
+                    Update:80       
+                 Time Used:0.71s    
+                   Loss:0.6763      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:11         
+                    Update:88       
+                 Time Used:0.70s    
+                   Loss:0.6761      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:12         
+                    Update:96       
+                 Time Used:0.70s    
+                   Loss:0.6759      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:13         
+                   Update:104       
+                 Time Used:0.71s    
+                   Loss:0.6757      
+                 Error:38.8021%     
+            ========================
+                        
+
+            Better Model Detected at Epoches:13  Iterations:104  Valid error:43.9670%
+
+                        
+            Epoch Done:
+            ========================
+                   Epoch:14         
+                   Update:112       
+                 Time Used:0.71s    
+                   Loss:0.6755      
+                 Error:38.8021%     
+            ========================
+                        
+
+            Better Model Detected at Epoches:14  Iterations:112  Valid error:42.5781%
+
+                        
+            Epoch Done:
+            ========================
+                   Epoch:15         
+                   Update:120       
+                 Time Used:0.70s    
+                   Loss:0.6753      
+                 Error:38.8021%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:16         
+                   Update:128       
+                 Time Used:0.70s    
+                   Loss:0.6751      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:17         
+                   Update:136       
+                 Time Used:0.71s    
+                   Loss:0.6750      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:18         
+                   Update:144       
+                 Time Used:0.70s    
+                   Loss:0.6749      
+                 Error:38.0208%     
+            ========================
+                        
+
+            Better Model Detected at Epoches:18  Iterations:144  Valid error:42.1875%
+
+                        
+            Epoch Done:
+            ========================
+                   Epoch:19         
+                   Update:152       
+                 Time Used:0.71s    
+                   Loss:0.6747      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:20         
+                   Update:160       
+                 Time Used:0.70s    
+                   Loss:0.6746      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:21         
+                   Update:168       
+                 Time Used:0.69s    
+                   Loss:0.6744      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:22         
+                   Update:176       
+                 Time Used:0.72s    
+                   Loss:0.6743      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:23         
+                   Update:184       
+                 Time Used:0.71s    
+                   Loss:0.6741      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:24         
+                   Update:192       
+                 Time Used:0.71s    
+                   Loss:0.6740      
+                 Error:38.4115%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:25         
+                   Update:200       
+                 Time Used:0.70s    
+                   Loss:0.6738      
+                 Error:38.0208%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:26         
+                   Update:208       
+                 Time Used:0.70s    
+                   Loss:0.6737      
+                 Error:37.6302%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:27         
+                   Update:216       
+                 Time Used:0.70s    
+                   Loss:0.6736      
+                 Error:38.0208%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:28         
+                   Update:224       
+                 Time Used:0.70s    
+                   Loss:0.6734      
+                 Error:39.0191%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:29         
+                   Update:232       
+                 Time Used:0.71s    
+                   Loss:0.6733      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:30         
+                   Update:240       
+                 Time Used:0.70s    
+                   Loss:0.6732      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:31         
+                   Update:248       
+                 Time Used:0.71s    
+                   Loss:0.6731      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:32         
+                   Update:256       
+                 Time Used:0.71s    
+                   Loss:0.6730      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:33         
+                   Update:264       
+                 Time Used:0.71s    
+                   Loss:0.6729      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:34         
+                   Update:272       
+                 Time Used:0.70s    
+                   Loss:0.6728      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:35         
+                   Update:280       
+                 Time Used:0.70s    
+                   Loss:0.6727      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:36         
+                   Update:288       
+                 Time Used:0.71s    
+                   Loss:0.6727      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:37         
+                   Update:296       
+                 Time Used:0.71s    
+                   Loss:0.6726      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:38         
+                   Update:304       
+                 Time Used:0.71s    
+                   Loss:0.6726      
+                 Error:39.4097%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:39         
+                   Update:312       
+                 Time Used:0.70s    
+                   Loss:0.6725      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:40         
+                   Update:320       
+                 Time Used:0.71s    
+                   Loss:0.6725      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:41         
+                   Update:328       
+                 Time Used:0.71s    
+                   Loss:0.6724      
+                 Error:39.8003%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:42         
+                   Update:336       
+                 Time Used:0.71s    
+                   Loss:0.6723      
+                 Error:40.1910%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:43         
+                   Update:344       
+                 Time Used:0.70s    
+                   Loss:0.6723      
+                 Error:40.1910%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:44         
+                   Update:352       
+                 Time Used:0.72s    
+                   Loss:0.6722      
+                 Error:40.5816%     
+            ========================
+                        
+
+            Better Model Detected at Epoches:44  Iterations:352  Valid error:41.7969%
+
+                        
+            Epoch Done:
+            ========================
+                   Epoch:45         
+                   Update:360       
+                 Time Used:0.70s    
+                   Loss:0.6722      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:46         
+                   Update:368       
+                 Time Used:0.71s    
+                   Loss:0.6721      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:47         
+                   Update:376       
+                 Time Used:0.71s    
+                   Loss:0.6719      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:48         
+                   Update:384       
+                 Time Used:0.70s    
+                   Loss:0.6718      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:49         
+                   Update:392       
+                 Time Used:0.72s    
+                   Loss:0.6717      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:50         
+                   Update:400       
+                 Time Used:0.70s    
+                   Loss:0.6717      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:51         
+                   Update:408       
+                 Time Used:0.72s    
+                   Loss:0.6717      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:52         
+                   Update:416       
+                 Time Used:0.70s    
+                   Loss:0.6716      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:53         
+                   Update:424       
+                 Time Used:0.70s    
+                   Loss:0.6716      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:54         
+                   Update:432       
+                 Time Used:0.71s    
+                   Loss:0.6716      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:55         
+                   Update:440       
+                 Time Used:0.70s    
+                   Loss:0.6715      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:56         
+                   Update:448       
+                 Time Used:0.70s    
+                   Loss:0.6715      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:57         
+                   Update:456       
+                 Time Used:0.72s    
+                   Loss:0.6715      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:58         
+                   Update:464       
+                 Time Used:0.70s    
+                   Loss:0.6715      
+                 Error:40.5816%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:59         
+                   Update:472       
+                 Time Used:0.70s    
+                   Loss:0.6715      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:60         
+                   Update:480       
+                 Time Used:0.71s    
+                   Loss:0.6715      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:61         
+                   Update:488       
+                 Time Used:0.70s    
+                   Loss:0.6715      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:62         
+                   Update:496       
+                 Time Used:0.70s    
+                   Loss:0.6714      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:63         
+                   Update:504       
+                 Time Used:0.69s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:64         
+                   Update:512       
+                 Time Used:0.71s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:65         
+                   Update:520       
+                 Time Used:0.72s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:66         
+                   Update:528       
+                 Time Used:0.71s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:67         
+                   Update:536       
+                 Time Used:0.70s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:68         
+                   Update:544       
+                 Time Used:0.70s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:69         
+                   Update:552       
+                 Time Used:0.70s    
+                   Loss:0.6713      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:70         
+                   Update:560       
+                 Time Used:0.70s    
+                   Loss:0.6714      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:71         
+                   Update:568       
+                 Time Used:0.71s    
+                   Loss:0.6714      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:72         
+                   Update:576       
+                 Time Used:0.71s    
+                   Loss:0.6715      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:73         
+                   Update:584       
+                 Time Used:0.70s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:74         
+                   Update:592       
+                 Time Used:0.69s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:75         
+                   Update:600       
+                 Time Used:0.71s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:76         
+                   Update:608       
+                 Time Used:0.70s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:77         
+                   Update:616       
+                 Time Used:0.69s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:78         
+                   Update:624       
+                 Time Used:0.71s    
+                   Loss:0.6716      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:79         
+                   Update:632       
+                 Time Used:0.70s    
+                   Loss:0.6717      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:80         
+                   Update:640       
+                 Time Used:0.70s    
+                   Loss:0.6717      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:81         
+                   Update:648       
+                 Time Used:0.71s    
+                   Loss:0.6718      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:82         
+                   Update:656       
+                 Time Used:0.71s    
+                   Loss:0.6718      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:83         
+                   Update:664       
+                 Time Used:0.70s    
+                   Loss:0.6719      
+                 Error:40.9722%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:84         
+                   Update:672       
+                 Time Used:0.70s    
+                   Loss:0.6719      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:85         
+                   Update:680       
+                 Time Used:0.71s    
+                   Loss:0.6719      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:86         
+                   Update:688       
+                 Time Used:0.71s    
+                   Loss:0.6720      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:87         
+                   Update:696       
+                 Time Used:0.70s    
+                   Loss:0.6720      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:88         
+                   Update:704       
+                 Time Used:0.71s    
+                   Loss:0.6720      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:89         
+                   Update:712       
+                 Time Used:0.72s    
+                   Loss:0.6721      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:90         
+                   Update:720       
+                 Time Used:0.71s    
+                   Loss:0.6721      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:91         
+                   Update:728       
+                 Time Used:0.71s    
+                   Loss:0.6721      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:92         
+                   Update:736       
+                 Time Used:0.72s    
+                   Loss:0.6722      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:93         
+                   Update:744       
+                 Time Used:0.71s    
+                   Loss:0.6723      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:94         
+                   Update:752       
+                 Time Used:0.71s    
+                   Loss:0.6724      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:95         
+                   Update:760       
+                 Time Used:0.71s    
+                   Loss:0.6724      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:96         
+                   Update:768       
+                 Time Used:0.70s    
+                   Loss:0.6725      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:97         
+                   Update:776       
+                 Time Used:0.71s    
+                   Loss:0.6725      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:98         
+                   Update:784       
+                 Time Used:0.71s    
+                   Loss:0.6726      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:99         
+                   Update:792       
+                 Time Used:0.71s    
+                   Loss:0.6726      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:100        
+                   Update:800       
+                 Time Used:0.71s    
+                   Loss:0.6727      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:101        
+                   Update:808       
+                 Time Used:0.71s    
+                   Loss:0.6727      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:102        
+                   Update:816       
+                 Time Used:0.72s    
+                   Loss:0.6728      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:103        
+                   Update:824       
+                 Time Used:0.70s    
+                   Loss:0.6729      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:104        
+                   Update:832       
+                 Time Used:0.71s    
+                   Loss:0.6729      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:105        
+                   Update:840       
+                 Time Used:0.69s    
+                   Loss:0.6730      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:106        
+                   Update:848       
+                 Time Used:0.70s    
+                   Loss:0.6730      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:107        
+                   Update:856       
+                 Time Used:0.70s    
+                   Loss:0.6731      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:108        
+                   Update:864       
+                 Time Used:0.70s    
+                   Loss:0.6732      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:109        
+                   Update:872       
+                 Time Used:0.69s    
+                   Loss:0.6732      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:110        
+                   Update:880       
+                 Time Used:0.70s    
+                   Loss:0.6733      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:111        
+                   Update:888       
+                 Time Used:0.72s    
+                   Loss:0.6733      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:112        
+                   Update:896       
+                 Time Used:0.71s    
+                   Loss:0.6733      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:113        
+                   Update:904       
+                 Time Used:0.71s    
+                   Loss:0.6734      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:114        
+                   Update:912       
+                 Time Used:0.70s    
+                   Loss:0.6734      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:115        
+                   Update:920       
+                 Time Used:0.70s    
+                   Loss:0.6734      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:116        
+                   Update:928       
+                 Time Used:0.70s    
+                   Loss:0.6735      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:117        
+                   Update:936       
+                 Time Used:0.71s    
+                   Loss:0.6735      
+                 Error:41.3628%     
+            ========================
+                        
+                        
+            Epoch Done:
+            ========================
+                   Epoch:118        
+                   Update:944       
+                 Time Used:0.72s    
+                   Loss:0.6735      
+                 Error:41.3628%     
+            ========================
+                        
